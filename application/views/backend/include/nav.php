@@ -43,23 +43,23 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header"></h6>
                         <a class="collapse-item" href="<?= base_url('index.php/dashboard/add-resident') ?>">Add Resident</a>
-                        <a class="collapse-item" href="<?= base_url('index.php/dashboard/view-residents') ?>">View Residents</a>
+                        <a class="collapse-item" href="<?= base_url('index.php/dashboard/view-resident') ?>">View Resident</a>
                     </div>
                 </div>
             </li>
 
+            
 
             <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
+            <hr class="sidebar-divider">
 
-            <!-- Sidebar Toggler (Sidebar) -->
-            <div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0" id="sidebarToggle"></button>
-            </div>
- 
-        </ul>
-        <!-- End of Sidebar -->
+     
+
         
+
+        </ul>
+     
+
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
 
@@ -238,7 +238,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?=$this->session->userdata('fullname');?></span>
                                 <img class="img-profile rounded-circle"
                                     src="<?= base_url();?>assets/backend/img/undraw_profile.svg">
                             </a>
@@ -258,10 +258,10 @@
                                     Activity Log
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                <a  href="<?= base_url();?>index.php/logout" >
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
-                                </a>
+</a>
                             </div>
                         </li>
 
